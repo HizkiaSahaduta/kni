@@ -82,5 +82,18 @@
     </script>
 @endif
 
+@if(\Session::has('error'))
+    <script>
+        var error = "{{ Session::get('error') }}"
+        Snackbar.show({
+            text: error,
+            actionTextColor: '#fff',
+            backgroundColor: '#e7515a',
+            pos: 'top-center'
+        });
+
+    </script>
+@endif
+
 @endsection
 {{-- Content Page JS End--}}
