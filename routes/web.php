@@ -40,7 +40,7 @@ Route::post('getSumHdr', 'POConfirmController@getSumHdr');
 Route::post('getPODtl', 'POConfirmController@getPODtl');
 Route::post('setApprove', 'POConfirmController@setApprove');
 Route::post('setReject', 'POConfirmController@setReject');
-//Route::post('setUnApprove', 'POConfirmController@setUnApprove');
+Route::post('setUnApprove', 'POConfirmController@setUnApprove');
 
 //-- DN Confirm
 Route::get('DNConfirm', 'DNConfirmController@index')->name('DNConfirm');
