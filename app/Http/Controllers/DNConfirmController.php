@@ -60,7 +60,7 @@ class DNConfirmController extends Controller
         }
 
 
-        $url = "https://jalan-api.kencana.org/api/getDelivHdr?1=1".$allreq;
+        $url = "https://webservice.kencana.org/api/getDelivHdr?1=1".$allreq;
 
 
         $curl = curl_init();
@@ -131,7 +131,7 @@ class DNConfirmController extends Controller
         $deliv_id = $request->deliv_id;
         $order_id = $request->order_id;
 
-        $url = "https://jalan-api.kencana.org/api/getDelivDtl?deliv_id=".$deliv_id."&order_id=".$order_id;
+        $url = "https://webservice.kencana.org/api/getDelivDtl?deliv_id=".$deliv_id."&order_id=".$order_id;
 
         $curl = curl_init();
 
@@ -183,7 +183,7 @@ class DNConfirmController extends Controller
         ];
 
         curl_setopt_array($curl, array(
-            CURLOPT_URL => "https://jalan-api.kencana.org/api/setDelivConfirm",
+            CURLOPT_URL => "https://webservice.kencana.org/api/setDelivConfirm",
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING => "",
             CURLOPT_MAXREDIRS => 10,

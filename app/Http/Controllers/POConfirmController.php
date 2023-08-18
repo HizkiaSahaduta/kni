@@ -58,7 +58,7 @@ class POConfirmController extends Controller
 
         }
 
-        $url = "https://jalan-api.kencana.org/api/getPOHdr?1=1".$allreq;
+        $url = "https://webservice.kencana.org/api/getPOHdr?1=1".$allreq;
 
         // echo $url;
 
@@ -189,7 +189,7 @@ class POConfirmController extends Controller
 
         }
 
-        $url = "https://jalan-api.kencana.org/api/getSumHdr?1=1".$allreq;
+        $url = "https://webservice.kencana.org/api/getSumHdr?1=1".$allreq;
 
         // echo $url;
 
@@ -294,7 +294,7 @@ class POConfirmController extends Controller
         $token = Session::get('token');
         $id = $request->id;
 
-        $url = "https://jalan-api.kencana.org/api/getPODtl?po_id=".$id;
+        $url = "https://webservice.kencana.org/api/getPODtl?po_id=".$id;
 
         $curl = curl_init();
 
@@ -343,7 +343,7 @@ class POConfirmController extends Controller
         ];
 
         curl_setopt_array($curl, array(
-            CURLOPT_URL => "https://jalan-api.kencana.org/api/setApprove",
+            CURLOPT_URL => "https://webservice.kencana.org/api/setApprove",
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING => "",
             CURLOPT_MAXREDIRS => 10,
@@ -389,7 +389,7 @@ class POConfirmController extends Controller
         ];
 
         curl_setopt_array($curl, array(
-            CURLOPT_URL => "https://jalan-api.kencana.org/api/setReject",
+            CURLOPT_URL => "https://webservice.kencana.org/api/setReject",
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING => "",
             CURLOPT_MAXREDIRS => 10,
@@ -435,7 +435,7 @@ class POConfirmController extends Controller
         ];
 
         curl_setopt_array($curl, array(
-            CURLOPT_URL => "https://jalan-api.kencana.org/api/setUnApprove",
+            CURLOPT_URL => "https://webservice.kencana.org/api/setUnApprove",
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING => "",
             CURLOPT_MAXREDIRS => 10,

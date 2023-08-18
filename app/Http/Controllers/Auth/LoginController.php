@@ -179,7 +179,7 @@ class LoginController extends Controller
                         $curl_login = curl_init();
 
                         curl_setopt_array($curl_getUserExist, array(
-                            CURLOPT_URL => "https://jalan-api.kencana.org/api/getUserExist?email=".$userid."@".$userid.".com",
+                            CURLOPT_URL => "https://webservice.kencana.org/api/getUserExist?email=".$userid."@".$userid.".com",
                             CURLOPT_RETURNTRANSFER => true,
                             CURLOPT_ENCODING => "",
                             CURLOPT_TIMEOUT => 30000,
@@ -212,7 +212,7 @@ class LoginController extends Controller
                                 ];
                 
                                 curl_setopt_array($curl_register, array(
-                                    CURLOPT_URL => "https://jalan-api.kencana.org/api/register",
+                                    CURLOPT_URL => "https://webservice.kencana.org/api/register",
                                     CURLOPT_RETURNTRANSFER => true,
                                     CURLOPT_ENCODING => "",
                                     CURLOPT_MAXREDIRS => 10,
@@ -264,7 +264,7 @@ class LoginController extends Controller
                                 ];
                 
                                 curl_setopt_array($curl_login, array(
-                                    CURLOPT_URL => "https://jalan-api.kencana.org/api/login",
+                                    CURLOPT_URL => "https://webservice.kencana.org/api/login",
                                     CURLOPT_RETURNTRANSFER => true,
                                     CURLOPT_ENCODING => "",
                                     CURLOPT_MAXREDIRS => 10,
